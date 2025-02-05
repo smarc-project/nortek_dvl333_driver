@@ -1,0 +1,32 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/julian/colcon_ws/install/smarc_msgs/include/**",
+        "/home/julian/colcon_ws/install/smarc_mission_msgs/include/**",
+        "/home/julian/colcon_ws/install/smarc_control_msgs/include/**",
+        "/home/julian/colcon_ws/install/sam_msgs/include/**",
+        "/home/julian/colcon_ws/install/sam_graph_slam_2_msgs/include/**",
+        "/home/julian/colcon_ws/install/lolo_msgs/include/**",
+        "/home/julian/colcon_ws/install/drone_msgs/include/**",
+        "/home/julian/colcon_ws/install/dead_reckoning_msgs/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/julian/colcon_ws/src/smarc2/messages/dead_reckoning_msgs/include/**",
+        "/home/julian/colcon_ws/src/smarc2/messages/lolo_msgs/include/**",
+        "/home/julian/colcon_ws/src/smarc2/messages/sam_graph_slam_2_msgs/include/**",
+        "/home/julian/colcon_ws/src/smarc2/vehicles/descriptions/lolo_description/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-arm64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
