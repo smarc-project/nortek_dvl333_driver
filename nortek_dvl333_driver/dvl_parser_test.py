@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
 
+import os
 import time
 from dvl_parser import DvlParser
 
 parser = DvlParser()
 
-f = open("../data/dvl.bin",'rb')
+# Select the data file to be read.
+# f = open("../data/dvl.bin",'rb')
+
+file_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'dvl.bin')
+f = open(file_path, 'rb')
+
 buffer = b''
 
 for b in f.read():
