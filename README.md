@@ -12,9 +12,16 @@ Please see the lolo_msg packaged for the definition of the utilized msg.
 Parsing is performed by dvl_parser.py and can be tested with dvl_parser_test.py with the data found in the data folder. 
 
 # DVL nodes
+dvl_node.py provides a node for connectiong to DVL via TCP or UDP, parsing data and publishing 
+
+# Parameters
+- tcp_mode (bool): Defines whether connection is TCP (True) or UDP (False)
+- socket_ip (str): The IP address of the DVL
+- socket_port (int): The port number of the DVL
+- buffer_size_bytes (int): The buffer size us for streaming date
 
 # TODO
-- [ ] Port dvl_node_udp.py
-- [ ] Port dvl_node.py
+- [X] Port dvl_node_udp.py, see below
+- [X] Port dvl_node.py, combined UDP functionality
 - [ ] Confirm that the above nodes have been properly setup within ROS2
 

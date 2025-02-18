@@ -23,6 +23,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'dvl_node = nortek_dvl333_driver.dvl_node:main'
         ],
     },
 )

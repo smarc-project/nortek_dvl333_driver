@@ -1,0 +1,16 @@
+<launch>
+    <!-- Declare Launch Arguments -->
+    <arg name="namespace" default="lolo"/>
+    <arg name="tcp_mode" default="false"/>
+    <arg name="sonar_ip" default="192.168.1.95"/>
+    <arg name="sonar_port" default="8112"/>
+    <arg name="buffer_size_bytes" default="512000"/>
+
+    <!-- Launch the DVL Node -->
+    <node pkg="nortek_dvl333_driver" exec="dvl_node" name="dvl_node" namespace="$(var namespace)" output="screen">
+        <param name="tcp_mode" value="$(var tcp_mode)"/>
+        <param name="sonar_ip" value="$(var sonar_ip)"/>
+        <param name="sonar_port" value="$(var sonar_port)"/>
+        <param name="buffer_size_bytes" value="$(var buffer_size_bytes)"/>
+    </node>
+</launch>

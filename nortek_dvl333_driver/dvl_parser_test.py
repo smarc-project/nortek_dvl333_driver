@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import os
-import time
 from dvl_parser import DvlParser
 
 parser = DvlParser()
