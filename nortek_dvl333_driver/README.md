@@ -1,12 +1,10 @@
 # nortek_dvl333_driver
 
 This is the ROS2 driver for the Nortek dvl333 used on Lolo.
-
 This is adapted from the ROS1 version, https://gits-15.sys.kth.se/MaritimeRoboticsLaboratory/nortek_dvl333_driver
 
 # Message Definition
-The mesage definition is included here for completeness but is not used.
-Please see the lolo_msg packaged for the definition of the utilized msg.
+The mesage definition can be found in the ROS2 package nortek_dvl333_msgs.
 
 # DVL parser
 Parsing is performed by dvl_parser.py and can be tested with dvl_parser_test.py with the data found in the data folder. 
@@ -23,5 +21,6 @@ dvl_node.py provides a node for connectiong to DVL via TCP or UDP, parsing data 
 # TODO
 - [X] Port dvl_node_udp.py, see below
 - [X] Port dvl_node.py, combined UDP functionality
-- [ ] Confirm that the above nodes have been properly setup within ROS2
+- [X] Confirm that the above nodes have been properly setup within ROS2
+- [ ] Testing with actual hardware
 
