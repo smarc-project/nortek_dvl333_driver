@@ -10,7 +10,8 @@ import socket
 
 from std_msgs.msg import String
 
-from lolo_msgs.msg import BottomTrack
+# from lolo_msgs.msg import BottomTrack  # this should be imported from the driver
+from nortek_dvl333_msgs.msg import BottomTrack
 
 from lolo_msgs.msg import Topics as LoloTopics
 # from lolo_msgs.msg import Links as LoloLinks
@@ -20,7 +21,6 @@ try:
     from .dvl_parser import DvlParser
 except ImportError:
     from dvl_parser import DvlParser
-    
 
 
 class DvlNode(Node):
