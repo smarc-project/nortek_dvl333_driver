@@ -141,7 +141,7 @@ class DvlNode(Node):
                 try:
                     self.udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
                     self.udp_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-                    self.udp_socket.bind((self.sonar_ip, self.sonar_port))
+                    self.udp_socket.bind(("0.0.0.0", self.sonar_port))
 
                     # Set a timeout 
                     self.udp_socket.settimeout(2)
@@ -161,21 +161,21 @@ class DvlNode(Node):
         #print("distance: " + str((beam_data[0])['distance']) + ", " + str((beam_data[1])['distance']) + ", " + str((beam_data[2])['distance']) + ", " + str((beam_data[3])['distance']))
 
         msg = BottomTrack()
-        msg.velBeam0 = (beam_data[0])['velocity']
-        msg.distBeam0 = (beam_data[0])['distance']
-        msg.fomBeam0 = (beam_data[0])['sigma']
+        msg.vel_beam0 = (beam_data[0])['velocity']
+        msg.dist_beam0 = (beam_data[0])['distance']
+        msg.fom_beam0 = (beam_data[0])['sigma']
 
-        msg.velBeam1 = (beam_data[1])['velocity']
-        msg.distBeam1 = (beam_data[1])['distance']
-        msg.fomBeam1 = (beam_data[1])['sigma']
+        msg.vel_beam1 = (beam_data[1])['velocity']
+        msg.dist_beam1 = (beam_data[1])['distance']
+        msg.fom_beam1 = (beam_data[1])['sigma']
 
-        msg.velBeam2 = (beam_data[2])['velocity']
-        msg.distBeam2 = (beam_data[2])['distance']
-        msg.fomBeam2 = (beam_data[2])['sigma']
+        msg.vel_beam2 = (beam_data[2])['velocity']
+        msg.dist_beam2 = (beam_data[2])['distance']
+        msg.fom_beam2 = (beam_data[2])['sigma']
 
-        msg.velBeam3 = (beam_data[3])['velocity']
-        msg.distBeam3 = (beam_data[3])['distance']
-        msg.fomBeam3 = (beam_data[3])['sigma']
+        msg.vel_beam3 = (beam_data[3])['velocity']
+        msg.dist_beam3 = (beam_data[3])['distance']
+        msg.fom_beam3 = (beam_data[3])['sigma']
 
         self.bt_pub.publish(msg)
 
